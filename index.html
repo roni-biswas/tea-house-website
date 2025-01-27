@@ -32,6 +32,9 @@
                     'xl': '1280px',
                     // => @media (min-width: 1280px) { ... }
                 },
+                container: {
+                    center: true,
+                },
                 extend: {
                     screens: {
                         'xs': { 'max': '575px' },
@@ -56,7 +59,7 @@
 <body class="font-manrope">
     <!-- header area -->
     <header
-        class="flex items-center justify-between gap-2.5 container mx-auto md:my-20 px-4 xs:flex-col-reverse sm:flex-col-reverse md:flex-row">
+        class="flex items-center justify-between gap-2.5 container md:my-20 px-4 xs:flex-col-reverse sm:flex-col-reverse md:flex-row">
         <!-- text content -->
         <div class="max-w-[628px] space-y-7">
             <h1
@@ -94,7 +97,7 @@
                         <img class="w-full" src="images/star.png" alt="">
                     </div>
                     <div>
-                        <h1 class="font-extrabold md:text-3xl text-dark-1 sm:text-sm">5.00</h1>
+                        <h1 class="font-extrabold md:text-3xl text-dark-1 sm:text-base">5.00</h1>
                         <p class="text-base font-semibold text-dark-3 sm:text-sm">Trust Pilot Ratings</p>
                     </div>
                 </div>
@@ -103,7 +106,80 @@
     </header> <!-- end header -->
 
     <!-- main area -->
-    <main></main>
+    <main class="container lg:container px-4">
+        <!-- features section start -->
+        <section class="my-[120px]">
+            <div class="text-center space-y-5 mb-[50px]">
+                <h1 class="text-dark-1 font-bold text-3xl md:font-extrabold md:text-[45px]">Our Featured
+                    Products</h1>
+                <p class="text-dark-3 max-w-[900px] text-center font-medium text-base mx-auto">There are many variations
+                    of
+                    passages of Lorem Ipsum available, but the majority
+                    have suffered alteration in some form, by injected humour, or randomised words which don't look even
+                    slightly believable. </p>
+            </div>
+            <!-- feature cards -->
+            <div class="grid gap-6 justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                <!-- *card -->
+                <div
+                    class="bg-gradient-to-t from-[rgba(244,244,244,0)] to-[#f4f4f4] rounded-lg flex items-center flex-col text-center max-w-[300px] p-[30px]">
+                    <!-- card image -->
+                    <div>
+                        <img class="w-full" src="images/tea-1.png" alt="">
+                    </div>
+                    <!-- card content -->
+                    <div class="space-y-2.5 mt-[30px]">
+                        <h3 class="text-2xl text-dark-1 font-bold md:font-extrabold">Milk Tea</h3>
+                        <p class="text-base text-dark-3 font-normal md:font-semibold">Creamer could be replaced by fresh
+                            milk</p>
+                    </div>
+                </div>
+                <!-- *card -->
+                <div
+                    class="bg-gradient-to-t from-[rgba(244,244,244,0)] to-[#f4f4f4] rounded-lg flex items-center flex-col text-center max-w-[300px] p-[30px]">
+                    <!-- card image -->
+                    <div>
+                        <img class="w-full" src="images/tea-2.png" alt="">
+                    </div>
+                    <!-- card content -->
+                    <div class="space-y-2.5 mt-[30px]">
+                        <h3 class="text-2xl text-dark-1 font-bold md:font-extrabold">Black Tea</h3>
+                        <p class="text-base text-dark-3 font-normal md:font-semibold">Creamer could be replaced by fresh
+                            milk</p>
+                    </div>
+                </div>
+                <!-- *card -->
+                <div
+                    class="bg-gradient-to-t from-[rgba(244,244,244,0)] to-[#f4f4f4] rounded-lg flex items-center flex-col text-center max-w-[300px] p-[30px]">
+                    <!-- card image -->
+                    <div>
+                        <img class="w-full" src="images/tea-3.png" alt="">
+                    </div>
+                    <!-- card content -->
+                    <div class="space-y-2.5 mt-[30px]">
+                        <h3 class="text-2xl text-dark-1 font-bold md:font-extrabold">Lemon Tea</h3>
+                        <p class="text-base text-dark-3 font-normal md:font-semibold">Creamer could be replaced by fresh
+                            milk</p>
+                    </div>
+                </div>
+                <!-- *card -->
+                <div
+                    class="bg-gradient-to-t from-[rgba(244,244,244,0)] to-[#f4f4f4] rounded-lg flex items-center flex-col text-center max-w-[300px] p-[30px]">
+                    <!-- card image -->
+                    <div>
+                        <img class="w-full" src="images/tea-4.png" alt="">
+                    </div>
+                    <!-- card content -->
+                    <div class="space-y-2.5 mt-[30px]">
+                        <h3 class="text-2xl text-dark-1 font-bold md:font-extrabold">Green Tea</h3>
+                        <p class="text-base text-dark-3 font-normal md:font-semibold">Creamer could be replaced by fresh
+                            milk</p>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- end feature -->
+
+    </main>
 </body>
 
 </html>
