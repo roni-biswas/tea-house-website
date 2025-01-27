@@ -12,16 +12,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
     <!-- link font awesome icons cdn -->
-    <script src="https://kit.fontawesome.com/6a807d6e15.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ba4eca73fe.js" crossorigin="anonymous"></script>
 
     <!-- link tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
+                screens: {
+                    'sm': '576px',
+                    // => @media (min-width: 640px) { ... }
+
+                    'md': '768px',
+                    // => @media (min-width: 768px) { ... }
+
+                    'lg': '1140px',
+                    // => @media (min-width: 1024px) { ... }
+
+                    'xl': '1280px',
+                    // => @media (min-width: 1280px) { ... }
+                },
                 extend: {
+                    screens: {
+                        'xs': { 'max': '575px' },
+                    },
+                    fontFamily: {
+                        manrope: ['Manrope', 'serif']
+                    },
                     colors: {
-                        clifford: '#da373d',
+                        'dark': {
+                            1: '#1C1C1C',
+                            2: '#494949',
+                            3: '#777777',
+                        }
                     }
                 }
             }
@@ -30,37 +53,57 @@
 
 </head>
 
-<body>
+<body class="font-manrope">
     <!-- header area -->
-    <header class="flex gap-9 max-w-screen-lg mx-auto flex-col-reverse px-4 pt-10 sm:flex-row md:flex-row md:px-5">
+    <header
+        class="flex items-center justify-between gap-2.5 container mx-auto md:my-20 px-4 xs:flex-col-reverse sm:flex-col-reverse md:flex-row">
         <!-- text content -->
-        <div>
-            <h1 class="text-3xl font-bold md:text-5xl lg:text-6xl lg:font-extrabold leading-tight mb-4">It's good <br>
-                tea time at The <br> Tea House</h1>
-            <p class="text-gray-500 text-4 w-10/12 mb-3 lg:w-4/5">Tea and Botanical Solutions Supplier Give Optimum
+        <div class="max-w-[628px] space-y-7">
+            <h1
+                class="text-dark-1 xs:text-3xl sm:text-4xl font-bold lg:text-5xl xl:text-7xl lg:font-extrabold xl:leading-tight xs:mt-20">
+                It's good
+                <br>
+                tea time at The <br> Tea House
+            </h1>
+            <p class="max-w-[510px] text-[18px] text-dark-3 font-medium">Tea and Botanical Solutions Supplier Give
+                Optimum
                 Satisfaction To
                 Your
                 Taste
                 Buds.
             </p>
             <button
-                class="bg-gradient-to-r from-orange-500 to-red-500 px-5 py-3 rounded-xl cursor-pointer text-white">Explore
+                class="bg-gradient-to-l from-[#FF0000] to-[#FF8938] rounded-lg px-5 py-4 text-white font-bold text-xl">Explore
                 More
-                <i class="fa-solid fa-arrow-right-long"></i>
+                <span class="ml-1 font-normal">
+                    <i class="fa-solid fa-arrow-right-long -rotate-45"></i>
+                </span>
             </button>
         </div>
         <!-- image content -->
-        <div>
+        <div class="max-w-[655px]">
             <!-- image -->
-            <div>
-                <img class="w-full" src="images/banner.png" alt="">
-            </div>
-            <!-- card -->
-            <div>
+            <div class="relative">
 
+                <img class="w-full" src="images/banner.png" alt="">
+
+                <!-- card -->
+                <div
+                    class="absolute px-2 py-4 xs:left-5 xs:-bottom-10 sm:left-28 sm:-bottom-0 md:left-0 md:-bottom-0 lg:left-20 lg:-bottom-0 xl:left-32 xl:bottom-8 flex items-center gap-3 bg-white shadow-lg rounded-lg px:3 py:2 md:px-4 md:py-2 lg:px-7 lg:py-5">
+                    <div>
+                        <img class="w-full" src="images/star.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="font-extrabold md:text-3xl text-dark-1 sm:text-sm">5.00</h1>
+                        <p class="text-base font-semibold text-dark-3 sm:text-sm">Trust Pilot Ratings</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </header> <!-- end header -->
+
+    <!-- main area -->
+    <main></main>
 </body>
 
 </html>
